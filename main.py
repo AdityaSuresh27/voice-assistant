@@ -51,7 +51,7 @@ if __name__ == '__main__':
             speaker.Speak("No input, sayanora")
             break
         elif "open picture" in text:
-            os.startfile(r"C:\Users\pdsk5\Pictures\Screenshots\Screenshot 2024-03-22 111354.png")
+            os.startfile(r"picture.png")
         elif "time" in text:
             speaker.Speak("Time is " + datetime.datetime.now().strftime("%I:%M %p"))
         for site in sites:
