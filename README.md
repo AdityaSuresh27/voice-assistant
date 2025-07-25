@@ -1,8 +1,6 @@
 # 🗣️ Voice Assistant in Python
 
-A simple yet extensible Python voice assistant that can listen, speak, and perform tasks like opening websites, applications, images, and more. It can also translate text to multiple languages and speak the translation aloud using Text-to-Speech (TTS).
-
-> Possibilities are endless — this project can be extended with AI integration(which I am planning on doing), custom commands, and offline voice recognition.
+An extensible Python voice assistant that can listen, speak, and perform tasks like opening websites, applications, images, and more, with a chatbot frontend using tkinter. It can also translate text to multiple languages and speak the translation aloud using Text-to-Speech (TTS).
 
 ---
 
@@ -24,4 +22,4 @@ Make sure you have Python 3.7+ installed.
 Install dependencies:
 
 ```bash
-pip install SpeechRecognition gTTS playsound pyaudio
+pip install SpeechRecognition gTTS playsound pyaudio tkinter
