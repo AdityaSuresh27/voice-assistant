@@ -1,27 +1,100 @@
-# 🗣️ Voice Assistant in Python
+````markdown
+# 🧠 Ember — A Smart Python Voice Assistant
 
-A simple yet extensible Python voice assistant that can listen, speak, and perform tasks like opening websites, applications, images, and more. It can also translate text to multiple languages and speak the translation aloud using Text-to-Speech (TTS).
+**Ember** is a simple yet powerful offline-capable voice assistant built in Python. It listens to your voice, responds intelligently, and can open apps, translate languages, or even run a local AI model for natural conversation — all customizable and privacy-respecting.
 
-> Possibilities are endless — this project can be extended with AI integration(which I am planning on doing), custom commands, and offline voice recognition.
+> 🛠️ Perfect for hobbyists, tinkerers, and developers looking to explore voice automation and local AI integration.
 
 ---
 
-## 🔧 Features
+## ✨ Features
 
-- 🎙️ Listens to your voice commands using a microphone
-- 🌐 Opens websites (e.g., Google, YouTube)
-- 🖼️ Opens local files (images, apps, folders, etc.)
-- 🌍 Translates speech into multiple languages
-- 🔊 Speaks translations using TTS (Text-to-Speech)
-- 🧠 Easily extendable with your own commands and logic
+- 🎙️ **Voice Command Recognition** — Uses microphone input to capture commands  
+- 🌐 **Open Websites & Local Apps** — Launch files, folders, and websites on your system  
+- 🌍 **Speech Translation** — Translate spoken sentences into multiple languages  
+- 🔊 **Text-to-Speech (TTS)** — Speak out responses using system or custom TTS  
+- 🧩 **Modular & Hackable** — Add your own commands, automation, or APIs easily  
+- 🧠 **Local AI Chatbot (Ollama + DeepSeek-R1)** — Talk to an offline LLM directly from your app  
 
 ---
 
 ## 🧪 Requirements
 
-Make sure you have Python 3.7+ installed.
+### 📦 Python Dependencies
 
-Install dependencies:
+Install the required libraries:
 
 ```bash
-pip install SpeechRecognition gTTS playsound pyaudio
+pip install SpeechRecognition gTTS playsound pyaudio deep-translator
+````
+
+For Windows voice output (optional):
+
+```bash
+pip install pywin32
+```
+
+---
+
+## 🤖 AI Integration (DeepSeek-R1 via Ollama)
+
+If you'd like to enable **local chatbot functionality**, you can use [Ollama](https://ollama.com/) with the DeepSeek-R1 model:
+
+### 1. 🔧 Install Ollama
+
+Download and install from [https://ollama.com](https://ollama.com).
+
+### 2. 🧠 Download DeepSeek-R1
+
+Run this command once to pull the model:
+
+```bash
+ollama run deepseek-r1:1.5b
+```
+#I used the basic model for my testing, also its free and open source so enjoy
+
+Ollama will handle the download and setup. You don’t need to re-run this every time.
+
+> ✅ Ember connects automatically to the Ollama model when chatbot mode is triggered.
+
+---
+
+## 🚀 How to Run
+
+```bash
+python ember.py
+```
+
+Speak your command into the microphone(or type it if you want to be boring). The assistant will respond or act accordingly.
+
+---
+
+## 🧠 Example Commands
+
+* `Open Google website`
+* `Translate good night to German`
+* `Open calculator/notepad`
+* `Ember [What you wish to ask]` → enables local chatbot mode with DeepSeek
+
+---
+
+## 📁 Recommended Folder Structure
+
+```
+ember-assistant/
+├── ember.py
+├── picture.png(A random picture which was used initially for testing etc)
+└── README.md
+```
+
+---
+
+## 🔐 Privacy Notice
+
+This app runs **entirely locally** (except translation, which uses Google Translate API). No voice data is sent to any cloud server.
+
+> For full offline mode, swap in Whisper for STT and MarianMT for translation.
+
+
+---
+
