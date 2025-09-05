@@ -1,7 +1,7 @@
 ````markdown
 # 🧠 Ember — A Smart Python Voice Assistant
 
-**Ember** is a simple yet powerful offline-capable voice assistant built in Python. It listens to your voice, responds intelligently, and can open apps, translate languages, or even run a local AI model for natural conversation — all customizable and privacy-respecting.
+**Ember** is a powerful offline-capable voice assistant built in Python. It listens to your voice, responds intelligently, and can open apps, translate languages, or even run a local AI model for natural conversation — all customizable and privacy-respecting.
 
 > 🛠️ Perfect for hobbyists, tinkerers, and developers looking to explore voice automation and local AI integration.
 
